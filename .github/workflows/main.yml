@@ -1,0 +1,45 @@
+name: Update Kalender Bali
+
+on:
+  workflow_dispatch:
+  schedule:
+    # Setiap hari sekitar 00:10 WITA
+    - cron: "10 16 * * *"
+
+permissions:
+  contents: write
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Install Chromium
+        run: npx playwright install --with-deps chromium
+
+      - name: Ambil Kalender Bali
+        run: npm run update
+
+      - name: Simpan hasil
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add today.txt today.json
+
+          if git diff --cached --quiet; then
+            echo "Tidak ada perubahan"
+          else
+            git commit -m "Update Kalender Bali"
+            git push
+          fi
