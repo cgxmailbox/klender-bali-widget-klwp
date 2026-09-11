@@ -1,14 +1,10 @@
 {
-  "source": "KalenderBali.org",
-  "source_url": "https://www.kalenderbali.org/index.php?bulan=9&tahun=2026&tanggal=11",
+  "source": "KalenderBali.org widget id=4",
+  "source_url": "https://kalenderbali.org/prevwidget.php?id=4",
   "timezone": "Asia/Makassar",
-  "date": "Jumat, 11 September 2026",
-  "saptawara": "Sukra",
-  "pancawara": "Umanis",
-  "wuku": "Menail",
-  "rerahinan": [
-    "Hari Bhatara Sri",
-    "Tilem Ketiga"
-  ],
-  "display": "Jumat, 11 September 2026. Sukra Umanis Menail (Hari Bhatara Sri, Tilem Ketiga)"
+  "generated_at": "2026-09-11T03:10:13.743Z",
+  "display": "Jumat, 11 September 2026. Tilem Ketiga, Sukra Umanis Menail",
+  "raw_lines": [
+    "Jumat, 11 September 2026. Tilem Ketiga, Sukra Umanis Menail"
+  ]
 }
