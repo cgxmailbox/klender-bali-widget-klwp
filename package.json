@@ -1,0 +1,12 @@
+{
+  "name": "klender-bali-widget-klwp",
+  "version": "2.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "update": "node update.mjs"
+  },
+  "dependencies": {
+    "playwright": "^1.55.0"
+  }
+}
